@@ -1,0 +1,20 @@
+{
+  "name": "valofy",
+  "version": "0.0.1",
+  "description": "valofy electron + react",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "start:dev": "npx electronmon --trace-warnings ."
+  },
+  "keywords": [
+    "electron",
+    "reactjs"
+  ],
+  "author": "refrainn",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^23.0.0"
+  }
+}
