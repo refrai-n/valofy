@@ -3,21 +3,26 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require('electron')
 const url = require('url')
-const path = require("path")
+const path = require('path')
 
 
 const createWindow = () => {
     // Create the browser window.
     const mainWindow = new BrowserWindow({
-        title: "Valofy",
-        width: 600,
-        height: 400,
+        title: 'Valofy',
+        width: 500,
+        height: 350,
+        resizable:false,
+        center: true,
+        alwaysOnTop: true
 
     });
-
+    mainWindow.menuBarVisible = false;
+    //mainWindow.webContents.openDevTools();
+    
     const startUrl = url.format({
-        pathname: path.join(__dirname, 'index.html'),
-        protocol: "file"
+        pathname: path.join(__dirname, './app/build/index.html'),
+        protocol: 'file'
     });
 
     // and load the index.html of the app.
